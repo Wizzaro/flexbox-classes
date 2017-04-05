@@ -1,0 +1,31 @@
+{
+  "name": "wizzaro-flexbox-classes",
+  "description": "This is a set of css classes for CSS Flexible Box Layout",
+  "main": "",
+  "authors": [
+    "Przemysław Dziadek <przemyslaw.dziadek@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "flex",
+    "flexbox",
+    "css",
+    "class",
+    "classes"
+  ],
+  "homepage": "https://github.com/Wizzaro/flexbox-clases",
+  "ignore": [
+    "**/.*",
+    "**/*.md",
+    "**/*.js",
+    "**/*.json",
+    "node_modules",
+    "bower_components",
+    "components",
+    "src",
+    "test"
+  ],
+  "devDependencies": {
+    "wizzaro-flexbox-mixins": "*"
+  }
+}

@@ -1,0 +1,11 @@
+.flex-wrap-nowrap {
+    @include flex-wrap-nowrap();
+}
+
+.flex-wrap-wrap {
+    @include flex-wrap-wrap();
+}
+
+.flex-wrap-wrap-reverse {
+    @include flex-wrap-wrap-reverse();
+}

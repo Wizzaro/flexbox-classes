@@ -1,0 +1,127 @@
+@import './components/wizzaro-flexbox-mixins/sass/flexbox-mixins.scss';
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+    font-family: Arial Helvetica sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    color: #757575;
+}
+
+h1, h2, h3, p {
+    margin: 30px 0;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #000000;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+.container {
+    background: #AB47BC;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.container.container-height {
+    height: 400px;
+}
+
+.container-position .item {
+    width: 15%;
+}
+
+.container-item-autowidth .item {
+    display: inline-block;
+    width: auto;
+    min-width: 25%;
+}
+
+.item {
+    width: 25%;
+    min-height: 50px;
+    background: #FF7043;
+    line-height: 58px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.item:nth-child(odd) {
+    background: #FF9800;
+    min-height: 70px;
+    line-height: 78px;
+}
+
+//Mixins
+
+.item-order:first-child {
+    @include order(2);
+}
+
+.item-order:last-child {
+    @include order(1);
+}
+
+.item-flex-grow {
+    @include flex-grow(1);
+
+    &:first-child {
+        @include flex-grow(2);
+    }
+}
+
+.item-flex-basis {
+    @include flex-basis(25%);
+
+    &:first-child {
+        @include flex-basis(50%);
+    }
+}
+
+.item-flex {
+    @include flex(1, 1, 25%);
+
+    &:first-child {
+        @include flex(1, 1, 50%);
+    }
+}

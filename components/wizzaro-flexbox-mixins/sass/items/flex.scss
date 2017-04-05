@@ -1,0 +1,18 @@
+@mixin flex($flex-grow: 0, $flex-shrink: 0, $flex-basis: auto) {
+    // Set a variable to be used by box-flex properties
+    $flex-grow-boxflex: $flex-grow;
+    // Box-Flex only supports a flex-grow value so lets grab the
+    // first item in the list and just return that.
+    @if type-of($flex-grow) == 'list' {
+        $flex-grow-boxflex: nth($flex-grow, 1);
+    }
+    -webkit-box: $flex-grow-boxflex;
+    -moz-box: $flex-grow-boxflex;
+    -webkit-flexbox: $flex-grow $flex-shrink $flex-basis;
+    -moz-flexbox: $flex-grow $flex-shrink $flex-basis;
+    -ms-flexbox: $flex-grow $flex-shrink $flex-basis;
+    -webkit-flex: $flex-grow $flex-shrink $flex-basis;
+    -moz-flex: $flex-grow $flex-shrink $flex-basis;
+    -ms-flex: $flex-grow $flex-shrink $flex-basis;
+    flex: $flex-grow $flex-shrink $flex-basis;
+}

@@ -1,0 +1,47 @@
+@mixin flex-direction-old-browser($value) {
+     @if $value == row-reverse{
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: horizontal;
+        -moz-box-direction: reverse;
+        -moz-box-orient: horizontal;
+    } @else if $value == column {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-direction: normal;
+        -moz-box-orient: vertical;
+    } @else if $value == column-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+        -moz-box-direction: reverse;
+        -moz-box-orient: vertical;
+    } @else {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-direction: normal;
+        -moz-box-orient: horizontal;
+    }
+}
+
+@mixin flex-direction($value: row) {
+    @include flex-direction-old-browser($value);
+    -webkit-flex-direction: $value;
+    -moz-flex-direction: $value;
+    -ms-flex-direction: $value;
+    flex-direction: $value;
+}
+
+@mixin flex-direction-row {
+     @include flex-direction(row);
+}
+
+@mixin flex-direction-row-reverse {
+     @include flex-direction(row-reverse);
+}
+
+@mixin flex-direction-column {
+     @include flex-direction(column);
+}
+
+@mixin flex-direction-column-reverse {
+     @include flex-direction(column-reverse);
+}

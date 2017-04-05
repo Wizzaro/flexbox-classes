@@ -1,0 +1,45 @@
+@mixin align-items($value: stretch) {
+     @if $value == flex-start{
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -webkit-flex-align: start;
+        -moz-flex-align: start;
+        -ms-flex-align: start;
+    } @else if $value == flex-end {
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -webkit-flex-align: end;
+        -moz-flex-align: end;
+        -ms-flex-align: end;
+    } @else {
+        -webkit-box-align: $value;
+        -moz-box-align: $value;
+        -webkit-flex-align: $value;
+        -moz-flex-align: $value;
+        -ms-flex-align: $value;
+    }
+    -webkit-align-items: $value;
+    -moz-align-items: $value;
+    -ms-align-items: $value;
+    align-items: $value;
+}
+
+@mixin align-items-flex-start {
+    @include align-items(flex-start);
+}
+
+@mixin align-items-flex-end {
+    @include align-items(flex-end);
+}
+
+@mixin align-items-center {
+    @include align-items(center);
+}
+
+@mixin align-items-baseline {
+    @include align-items(baseline);
+}
+
+@mixin align-items-stretch {
+    @include align-items(stretch);
+}

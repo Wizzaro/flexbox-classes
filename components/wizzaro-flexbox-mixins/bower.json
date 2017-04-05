@@ -1,0 +1,28 @@
+{
+  "name": "wizzaro-flexbox-mixins",
+  "homepage": "https://github.com/Wizzaro/flexbox-mixins",
+  "authors": [
+    "Przemysław Dziadek <przemyslaw.dziadek@gmail.com>"
+  ],
+  "description": "This is a set of mixins for those who want to mess around with flexbox using the native support of current browsers.",
+  "main": "",
+  "keywords": [
+    "flex",
+    "flexbox",
+    "css",
+    "sass",
+    "less",
+    "mixin",
+    "mixins"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "**/*.md",
+    "**/*.json",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
