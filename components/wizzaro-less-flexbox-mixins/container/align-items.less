@@ -1,0 +1,51 @@
+.align-items-old-browsers(@value) when (@value = flex-start) {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-flex-align: start;
+    -moz-flex-align: start;
+    -ms-flex-align: start;
+}
+
+.align-items-old-browsers(@value) when (@value = flex-end) {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -webkit-flex-align: end;
+    -moz-flex-align: end;
+    -ms-flex-align: end;
+}
+
+.align-items-old-browsers(@value) when (@value = center), (@value = baseline), (@value = stretch) {
+    -webkit-box-align: @value;
+    -moz-box-align: @value;
+    -webkit-flex-align: @value;
+    -moz-flex-align: @value;
+    -ms-flex-align: @value;
+}
+
+.align-items(@value: stretch) {
+    .align-items-old-browsers(@value);
+    -webkit-align-items: @value;
+    -moz-align-items: @value;
+    -ms-align-items: @value;
+    align-items: @value;
+}
+
+.align-items-flex-start() {
+    .align-items(flex-start);
+}
+
+.align-items-flex-end() {
+    .align-items(flex-end);
+}
+
+.align-items-center() {
+    .align-items(center);
+}
+
+.align-items-baseline() {
+    .align-items(baseline);
+}
+
+.align-items-stretch() {
+    .align-items(stretch);
+}

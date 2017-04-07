@@ -26,6 +26,7 @@
     "test"
   ],
   "devDependencies": {
-    "wizzaro-flexbox-mixins": "*"
+    "wizzaro-sass-flexbox-mixins": "*",
+    "wizzaro-less-flexbox-mixins": "*"
   }
 }

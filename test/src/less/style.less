@@ -1,4 +1,4 @@
-@import './components/wizzaro-sass-flexbox-mixins/flexbox-mixins';
+@import './components/wizzaro-less-flexbox-mixins/flexbox-mixins';
 
 * {
     -webkit-box-sizing: border-box;
@@ -95,33 +95,33 @@ h3 {
 //Mixins
 
 .item-order:first-child {
-    @include order(2);
+    .order(2);
 }
 
 .item-order:last-child {
-    @include order(1);
+    .order(1);
 }
 
 .item-flex-grow {
-    @include flex-grow(1);
+    .flex-grow(1);
 
     &:first-child {
-        @include flex-grow(2);
+        .flex-grow(2);
     }
 }
 
 .item-flex-basis {
-    @include flex-basis(25%);
+    .flex-basis(25%);
 
     &:first-child {
-        @include flex-basis(50%);
+        .flex-basis(50%);
     }
 }
 
 .item-flex {
-    @include flex(1, 1, 25%);
+    .flex(1, 1, 25%);
 
     &:first-child {
-        @include flex(1, 1, 50%);
+        .flex(1, 1, 50%);
     }
 }

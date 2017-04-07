@@ -1,0 +1,23 @@
+.flex-wrap-old-browser(@value) when (@value = nowrap) {
+    -ms-flex-wrap: none;
+}
+
+.flex-wrap(@value: nowrap) {
+    -webkit-flex-wrap: @value;
+    -moz-flex-wrap: @value;
+    .flex-wrap-old-browser(@value);
+    -ms-flex-wrap: @value;
+    flex-wrap: @value;
+}
+
+.flex-wrap-nowrap() {
+    .flex-wrap(nowrap);
+}
+
+.flex-wrap-wrap() {
+    .flex-wrap(wrap);
+}
+
+.flex-wrap-wrap-reverse() {
+    .flex-wrap(wrap-reverse);
+}

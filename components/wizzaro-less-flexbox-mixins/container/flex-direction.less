@@ -1,0 +1,50 @@
+.flex-direction-old-browser(@value) when (@value = row) {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -moz-box-orient: horizontal;
+}
+
+.flex-direction-old-browser(@value) when (@value = row-reverse) {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -moz-box-orient: horizontal;
+}
+.flex-direction-old-browser(@value) when (@value = column) {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+}
+
+.flex-direction-old-browser(@value) when (@value = column-reverse) {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -moz-box-orient: vertical;
+}
+
+.flex-direction(@value: row) {
+    .flex-direction-old-browser(@value);
+    -webkit-flex-direction: @value;
+    -moz-flex-direction: @value;
+    -ms-flex-direction: @value;
+    flex-direction: @value;
+}
+
+.flex-direction-row() {
+     .flex-direction(row);
+}
+
+.flex-direction-row-reverse() {
+     .flex-direction(row-reverse);
+}
+
+.flex-direction-column() {
+     .flex-direction(column);
+}
+
+.flex-direction-column-reverse() {
+     .flex-direction(column-reverse);
+}

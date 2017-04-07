@@ -1,0 +1,49 @@
+.align-content-old-browsers(@value) when (@value = flex-start) {
+    -webkit-flex-line-pack: start;
+    -moz-flex-line-pack: start;
+    -ms-flex-line-pack: start;
+}
+
+.align-content-old-browsers(@value) when (@value = flex-end) {
+    -webkit-flex-line-pack: end;
+    -moz-flex-line-pack: end;
+    -ms-flex-line-pack: end;
+}
+
+.align-content-old-browsers(@value) when not (@value = flex-start) and (@value = flex-end) {
+    -webkit-flex-line-pack: @value;
+    -moz-flex-line-pack: @value;
+    -ms-flex-line-pack: @value;
+}
+
+.align-content(@value: stretch) {
+    .align-content-old-browsers(@value);
+    -webkit-align-content: @value;
+    -moz-align-content: @value;
+    -ms-align-content: @value;
+    align-content: @value;
+}
+
+.align-content-flex-start() {
+    .align-content(flex-start);
+}
+
+.align-content-flex-end() {
+    .align-content(flex-end);
+}
+
+.align-content-center() {
+    .align-content(center);
+}
+
+.align-content-space-between() {
+    .align-content(space-between);
+}
+
+.align-content-space-around() {
+    .align-content(space-around);
+}
+
+.align-content-stretch() {
+    .align-content(stretch);
+}

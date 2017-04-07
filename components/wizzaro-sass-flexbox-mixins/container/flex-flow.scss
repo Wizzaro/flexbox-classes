@@ -1,4 +1,4 @@
-@mixin flex-flow($direction, $wrap) {
+@mixin flex-flow($direction: row, $wrap: nowrap) {
     @include flex-direction-old-browser($direction);
     @include flex-wrap-old-browser($wrap);
     -webkit-flex-flow: $direction $wrap;

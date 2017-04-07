@@ -1,0 +1,49 @@
+.align-self-old-browsers(@value) when (@value = flex-start) {
+    -webkit-flex-item-align: start;
+    -moz-flex-item-align: start;
+    -ms-flex-item-align: start;
+}
+
+.align-self-old-browsers(@value) when (@value = flex-end) {
+    -webkit-flex-item-align: end;
+    -moz-flex-item-align: end;
+    -ms-flex-item-align: end;
+}
+
+.align-self-old-browsers(@value) when not (@value = flex-start) and (@value = flex-end) {
+    -webkit-flex-item-align: @value;
+    -moz-flex-item-align: @value;
+    -ms-flex-item-align: @value;
+}
+
+.align-self(@value: auto) {
+    .align-self-old-browsers(@value);
+    -webkit-align-self: @value;
+    -moz-align-self: @value;
+    -ms-align-self: @value;
+    align-self: @value;
+}
+
+.align-self-auto() {
+    .align-self(auto);
+}
+
+.align-self-flex-start() {
+    .align-self(flex-start);
+}
+
+.align-self-flex-end() {
+    .align-self(flex-end);
+}
+
+.align-self-center() {
+    .align-self(center);
+}
+
+.align-self-baseline() {
+    .align-self(baseline);
+}
+
+.align-self-stretch() {
+    .align-self(stretch);
+}

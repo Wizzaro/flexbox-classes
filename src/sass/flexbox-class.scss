@@ -1,5 +1,5 @@
 //Mixins
-@import './components/wizzaro-flexbox-mixins/sass/flexbox-mixins.scss';
+@import './components/wizzaro-sass-flexbox-mixins/flexbox-mixins.scss';
 
 //Class for the Parent
 @import 'container/display-flex';
@@ -12,4 +12,4 @@
 @import 'container/align-content';
 
 //Class for the Items
-@import 'items/align-self';
+@import 'item/align-self';

@@ -1,0 +1,63 @@
+.justify-content-old-browser(@value) when (@value = flex-start) {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-flex-pack: start;
+    -moz-flex-pack: start;
+    -ms-flex-pack: start;
+}
+
+.justify-content-old-browser(@value) when (@value = flex-end) {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -webkit-flex-pack: end;
+    -moz-flex-pack: end;
+    -ms-flex-pack: end;
+}
+
+.justify-content-old-browser(@value) when (@value = space-between) {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-flex-pack: justify;
+    -moz-flex-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+.justify-content-old-browser(@value) when (@value = space-around) {
+    -ms-flex-pack: distribute;
+}
+
+.justify-content-old-browser(@value) when (@value = center) {
+    -webkit-box-pack: @value;
+    -moz-box-pack: @value;
+    -webkit-flex-pack: @value;
+    -moz-flex-pack: @value;
+    -ms-flex-pack: @value;
+}
+
+.justify-content(@value: flex-start) {
+    .justify-content-old-browser(@value);
+    -webkit-justify-content: @value;
+    -moz-justify-content: @value;
+    -ms-justify-content: @value;
+    justify-content: @value;
+}
+
+.justify-content-flex-start() {
+    .justify-content(flex-start);
+}
+
+.justify-content-flex-end() {
+    .justify-content(flex-end);
+}
+
+.justify-content-center() {
+    .justify-content(center);
+}
+
+.justify-content-space-between() {
+    .justify-content(space-between);
+}
+
+.justify-content-space-around() {
+    .justify-content(space-around);
+}
