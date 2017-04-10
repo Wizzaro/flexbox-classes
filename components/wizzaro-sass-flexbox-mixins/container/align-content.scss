@@ -18,27 +18,3 @@
     -ms-align-content: $value;
     align-content: $value;
 }
-
-@mixin align-content-flex-start {
-    @include align-content(flex-start);
-}
-
-@mixin align-content-flex-end {
-    @include align-content(flex-end);
-}
-
-@mixin align-content-center {
-    @include align-content(center);
-}
-
-@mixin align-content-space-between {
-    @include align-content(space-between);
-}
-
-@mixin align-content-space-around {
-    @include align-content(space-around);
-}
-
-@mixin align-content-stretch {
-    @include align-content(stretch);
-}

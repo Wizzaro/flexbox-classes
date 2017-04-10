@@ -17,27 +17,3 @@
     -ms-align-self: $value;
     align-self: $value;
 }
-
-@mixin align-self-auto {
-    @include align-self(auto);
-}
-
-@mixin align-self-flex-start {
-    @include align-self(flex-start);
-}
-
-@mixin align-self-flex-end {
-    @include align-self(flex-end);
-}
-
-@mixin align-self-center {
-    @include align-self(center);
-}
-
-@mixin align-self-baseline {
-    @include align-self(baseline);
-}
-
-@mixin align-self-stretch {
-    @include align-self(stretch);
-}

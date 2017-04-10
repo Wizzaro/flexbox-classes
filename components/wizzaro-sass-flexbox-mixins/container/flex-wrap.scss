@@ -11,15 +11,3 @@
     -ms-flex-wrap: $value;
     flex-wrap: $value;
 }
-
-@mixin flex-wrap-nowrap {
-    @include flex-wrap(nowrap);
-}
-
-@mixin flex-wrap-wrap {
-    @include flex-wrap(wrap);
-}
-
-@mixin flex-wrap-wrap-reverse {
-    @include flex-wrap(wrap-reverse);
-}
